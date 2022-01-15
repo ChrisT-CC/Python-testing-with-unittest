@@ -17,11 +17,14 @@ class TestEvens(unittest.TestCase):
 
     def test_values_in_list(self):
         """
-        2nd test returns False if an empty list is passed in
-        3rd test returns True if number of even numbers is even
+        Create tests for a list
         """
+        # 2nd test to return False if an empty list is passed in
         self.assertEqual(even_number_of_evens([]), False)
+        # 3rd test to return True if number of even numbers is even
         self.assertEqual(even_number_of_evens([2, 4]), True)
+        # 4th test to fail if only one even number is passed in
+        self.assertEqual(even_number_of_evens([2]), False)
 
 
 # add a pass statement and unittest.main. So we can run the file without
