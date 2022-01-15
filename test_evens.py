@@ -15,6 +15,12 @@ class TestEvens(unittest.TestCase):
         """
         self.assertRaises(TypeError, even_number_of_evens, 4)
 
+    def test_values_in_list(self):
+        """
+        2nd test returns False if an empty list is passed in
+        """
+        self.assertEqual(even_number_of_evens([]), False)
+
 
 # add a pass statement and unittest.main. So we can run the file without
 # specifying the unit test module
