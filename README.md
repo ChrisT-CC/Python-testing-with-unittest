@@ -24,3 +24,11 @@ It should also raise a TypeError if anything  other than a list is passed into t
 
 ---
 
+## Set up files
+
+- create `evens.py` file to build the function
+- create `test_evens.py` file to write the tests
+
+Unittest requires that our test  filename starts with the word "test", followed by an underscore and a descriptive name of what we're testing.
+
+---
