@@ -25,6 +25,8 @@ class TestEvens(unittest.TestCase):
         self.assertEqual(even_number_of_evens([2, 4]), True)
         # 4th test to fail if only one even number is passed in
         self.assertEqual(even_number_of_evens([2]), False)
+        # 5th test to fail if odd numbers in list
+        self.assertEqual(even_number_of_evens([1, 3, 5]), False)
 
 
 # add a pass statement and unittest.main. So we can run the file without
