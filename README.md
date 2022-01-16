@@ -67,3 +67,11 @@ Unittest requires that our test  filename starts with the word "test", followed 
 - *when Python runs a file directly, it names it `__main__`*
 
 --- 
+
+## Student class testing
+
+In this project we will create a Student class with some basic functionality for creating student instances. This class's properties and methods will be used for testing using Test-Driven Development.
+
+![student class](student_class_testing/images/student-class.JPG)
+
+---
