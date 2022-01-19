@@ -74,4 +74,15 @@ In this project we will create a Student class with some basic functionality for
 
 ![student class](student_class_testing/images/student-class.JPG)
 
+
+- ### basic setup of test file
+- ### create the test case
+- ### create an instance of the student class
+- ### create first test for full_name() method and add code to pass the test
+- ### create a test for alert_santa() method and add code to pass the test
+- ### create a test for email() method and add code to pass the test
+- ### refactor code using "setUp" to create a student instance
+- ### create a test for apply_extension() method and add code to pass the test
+- ### implement mocking to test successful and unsuccessful requests for course_schedule method
+
 ---
