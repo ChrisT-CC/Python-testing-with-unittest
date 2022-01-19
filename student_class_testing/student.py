@@ -12,6 +12,7 @@ class Student:
         self._last_name = last_name
         self._start_date = date.today()
         self.end_date = date.today() + timedelta(days=365)
+        self.naughty_list = False
 
     # add the @property decorator since this is a method to get data only
     @property
@@ -21,3 +22,6 @@ class Student:
         such as the student's full name
         """
         return f"{self._first_name} {self._last_name}"
+
+    def alert_santa(self):
+        self.naughty_list = True
