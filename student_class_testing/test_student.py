@@ -1,6 +1,8 @@
+""" Test file for student.py """
 import unittest
-from student import Student
 from datetime import timedelta
+from unittest.mock import patch
+from student import Student
 
 
 class TestStudent(unittest.TestCase):
@@ -52,8 +54,32 @@ class TestStudent(unittest.TestCase):
         # test if apply_extension() method adds "days" to end_date
         old_end_date = self.student.end_date
         self.student.apply_extension(5)
-        self.assertEqual(self.student.end_date, old_end_date + timedelta(days=5))
+        self.assertEqual(
+            self.student.end_date, old_end_date + timedelta(days=5))
 
+    # create a test for a successful request
+    def test_course_schedule_success(self):
+        """ mocking a call to fictional API - success test"""
+        print("course_schedule_success")
+        # set context manager
+        with patch("student.requests.get") as mocked_get:
+            mocked_get.return_value.ok = True
+            mocked_get.return_value.text = "Success"
+
+            schedule = self.student.course_schedule()
+            self.assertEqual(schedule, "Success")
+
+    # create a test for a failed request
+    def test_course_schedule_failed(self):
+        """ mocking a call to fictional API - fail test"""
+        print("course_schedule_failed")
+        # set context manager
+        with patch("student.requests.get") as mocked_get:
+            mocked_get.return_value.ok = False
+
+            schedule = self.student.course_schedule()
+            self.assertEqual(
+                schedule, "Something went wrong with the request!")
 
 
 if __name__ == "__main__":

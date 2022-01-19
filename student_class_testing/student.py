@@ -2,6 +2,7 @@
 # import "date" and "timedelta" methods from the datetime module, to allow us
 # to define start and end dates
 from datetime import date, timedelta
+import requests
 
 
 class Student:
@@ -39,3 +40,13 @@ class Student:
     def apply_extension(self, days):
         """ a method to modify the end_date by '10' """
         self.end_date = self.end_date + timedelta(days=days)
+
+    def course_schedule(self):
+        """ a method to mock a fictional API call """
+        response = requests.get(
+            f"http://company.com/course-schedule/{self._last_name}/{self._first_name}")
+
+        if response.ok:
+            return response.text
+        else:
+            return "Something went wrong with the request!"
