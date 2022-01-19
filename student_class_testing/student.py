@@ -24,4 +24,15 @@ class Student:
         return f"{self._first_name} {self._last_name}"
 
     def alert_santa(self):
+        """
+        a method to modify the naughty_list property
+        """
         self.naughty_list = True
+
+    @property
+    def email(self):
+        """
+        a read-only method to return a student's email
+        """
+        # return f"{self._first_name.lower()}{self._last_name.lower()}@email.com"
+        return f"{self._first_name.lower()}.{self._last_name.lower()}@email.com"

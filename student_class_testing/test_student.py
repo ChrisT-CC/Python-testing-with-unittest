@@ -21,7 +21,16 @@ class TestStudent(unittest.TestCase):
         # call alert_santa() method
         student.alert_santa()
 
+        # test to see if alert_santa() method returns the expected output
         self.assertTrue(student.naughty_list)
+
+    def test_email(self):
+        """ 3rd test """
+        # create an instance of the student class
+        student = Student("John", "Doe")
+
+        # test to see if email() method returns the expected output
+        self.assertEqual(student.email, "john.doe@email.com")
 
 
 if __name__ == "__main__":
