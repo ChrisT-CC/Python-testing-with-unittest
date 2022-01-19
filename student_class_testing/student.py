@@ -34,5 +34,8 @@ class Student:
         """
         a read-only method to return a student's email
         """
-        # return f"{self._first_name.lower()}{self._last_name.lower()}@email.com"
         return f"{self._first_name.lower()}.{self._last_name.lower()}@email.com"
+
+    def apply_extension(self, days):
+        """ a method to modify the end_date by '10' """
+        self.end_date = self.end_date + timedelta(days=days)
