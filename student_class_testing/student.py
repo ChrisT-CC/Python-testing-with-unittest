@@ -11,7 +11,7 @@ class Student:
         self._first_name = first_name
         self._last_name = last_name
         self._start_date = date.today()
-        self._end_date = date.today() + timedelta(days=365)
+        self.end_date = date.today() + timedelta(days=365)
 
     # add the @property decorator since this is a method to get data only
     @property
